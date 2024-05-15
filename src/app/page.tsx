@@ -11,9 +11,9 @@ export default async function Page({ searchParams }: { searchParams: Params }) {
 
   let apiUrl = '';
   if (genre === 'top_rated') {
-    apiUrl = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`;
+    apiUrl = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=pt-BR&page=1`;
   } else {
-    apiUrl = `https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}&language=en-US&page=1`;
+    apiUrl = `https://api.themoviedb.org/3/trending/all/week?api_key=${API_KEY}&language=pt-BR&page=1`;
   }
 
   const res = await fetch(apiUrl);

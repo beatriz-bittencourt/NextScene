@@ -8,7 +8,7 @@ import DarkMode from './DarkMode';
 
 function Header() {
   return (
-    <div className="flex justify-between items-center p-3 max-w-6xl mx-auto">
+    <div className="flex justify-between items-center p-3 max-w-6xl mx-auto h-20">
       <Link href="/" className='flex items-center gap-1 text-xl font-bold py-1 px-2 hover:text-blue-500 transition-colors duration-300'>
         NextScene
       </Link>
