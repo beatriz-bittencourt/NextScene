@@ -22,7 +22,7 @@ export default async function SearchPage({ params }: SearchPageProps) {
       );
       return res.json();
     } catch (error) {
-      console.error("Erro ao buscar os resultados de pesquisa:", error);
+      console.error("Erro ao buscar os resultados de pesquisa", error);
       return null;
     }
   };
@@ -37,7 +37,8 @@ export default async function SearchPage({ params }: SearchPageProps) {
   return (
     <div>
       {results && results.length === 0 ? (
-        <h1 className="text-center pt-6">Não foram encontrados resultados</h1>
+        <h1 className="text-center pt-6">Não foram encontrados <br/>
+        resultados para essa busca.</h1>
       ) : (
         <Results results={results} />
       )}

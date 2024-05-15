@@ -14,7 +14,7 @@ function Header() {
       </Link>
 
       <div className="flex items-center gap-5">
-        <div className='flex gap-5 '>
+        <div className='flex gap-6'>
           <MenuItem title="Home" address="/" Icon={AiFillHome} />
           {/*<MenuItem title="Sobre" address="/sobre" Icon={BsFillInfoCircleFill} />*/}
 

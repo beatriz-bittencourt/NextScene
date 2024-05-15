@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="p-7 {inter.className}"> 
+      <body className="pl-7 pr-7 {inter.className}"> 
         <Providers>
           <Header />
           <SearchBox />
