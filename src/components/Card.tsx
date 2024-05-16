@@ -18,6 +18,12 @@ interface CardProps {
   result: Result;
 }
 
+const formatarData = (data: string | undefined) => {
+  if (!data) return '';
+  const [ano, mes, dia] = data.split('-');
+  return `${dia}/${mes}/${ano}`;
+};
+
 export default function Card({ result }: CardProps) {
   return (
     <div className="group cursor-pointer hover:shadow-slate-400 shadow-md rounded-lg border border-slate-400 m-3 transition-shadow duration-200">
@@ -34,7 +40,7 @@ export default function Card({ result }: CardProps) {
           <h2 className="text-md font-bold ">{result.title || result.name}</h2>
           <p className="line-clamp-2 text-sm">{result.overview}</p> 
           <p className="flex items-center mt-3 text-sm">
-            {result.release_date || result.first_air_date}
+            {formatarData(result.release_date || result.first_air_date)}
             <FiThumbsUp className="h-5 mr-1 ml-3" />
             {result.vote_count}
           </p>
